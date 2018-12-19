@@ -1,0 +1,8 @@
+LXI H,8200
+MVI B,10
+LOOP: MOV D,M
+      ADD D
+      INX H
+      DCR B
+      JNZ LOOP
+HLT

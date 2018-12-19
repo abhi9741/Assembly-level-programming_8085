@@ -1,0 +1,11 @@
+MVI H,8200H
+MOV B,10
+LOOP: ADD M
+      INX H
+      DCR B
+      JNZ LOOP
+      JC CRY
+      HLT
+CRY: MVI A,1H
+     STA 8500H
+     HLT
